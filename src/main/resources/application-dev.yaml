@@ -1,0 +1,10 @@
+server:
+  port: 8989
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password:
+    url: jdbc:postgresql://localhost:5432/dummy
+dans:
+  base-url: http://dev3.dansmultipro.co.id
