@@ -15,7 +15,10 @@ import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
         "com.spring.demo.dans.libraries",
         "com.spring.demo.dans.rest.web"
     })
-@EnableR2dbcRepositories(basePackages = "com.spring.demo.dans.dao")
+//@EnableR2dbcRepositories(basePackages = {
+//    "com.spring.demo.dans.dao",
+//    "com.spring.demo.dans.entity"
+//})
 @SpringBootApplication
 public class Main {
 
