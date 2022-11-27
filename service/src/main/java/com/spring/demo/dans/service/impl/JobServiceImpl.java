@@ -1,6 +1,6 @@
 package com.spring.demo.dans.service.impl;
 
-import com.spring.demo.dans.entity.dto.Job;
+import com.spring.demo.dans.entity.dto.JobDto;
 import com.spring.demo.dans.entity.enums.ResponseCode;
 import com.spring.demo.dans.libraries.exception.BusinessLogicException;
 import com.spring.demo.dans.libraries.helper.JSONHelper;
@@ -25,9 +25,9 @@ public class JobServiceImpl implements JobService {
     private JobRecruitmentOutboundService jobRecruitmentOutboundService;
 
     @Override
-    public Flux<Job> findAllJob() {
+    public Flux<JobDto> findAllJob() {
         return Mono.justOrEmpty(jobRecruitmentOutboundService.getJobRecruitment("/positions.json"))
-            .map(response -> JSONHelper.convertJsonInStringToObject(response, Job[].class))
+            .map(response -> JSONHelper.convertJsonInStringToObject(response, JobDto[].class))
             .switchIfEmpty(Mono.error(new BusinessLogicException(
                 ResponseCode.DATA_NOT_EXIST.getCode(),
                 ResponseCode.DATA_NOT_EXIST.getMessage())))
@@ -35,9 +35,9 @@ public class JobServiceImpl implements JobService {
     }
 
     @Override
-    public Mono<Job> findJobById(UUID id) {
+    public Mono<JobDto> findJobById(UUID id) {
         return Mono.justOrEmpty(jobRecruitmentOutboundService.getJobRecruitment("/positions/"+id.toString()))
-            .map(response -> JSONHelper.convertJsonInStringToObject(response, Job.class))
+            .map(response -> JSONHelper.convertJsonInStringToObject(response, JobDto.class))
             .switchIfEmpty(Mono.error(new BusinessLogicException(
                 ResponseCode.DATA_NOT_EXIST.getCode(),
                 ResponseCode.DATA_NOT_EXIST.getMessage())));

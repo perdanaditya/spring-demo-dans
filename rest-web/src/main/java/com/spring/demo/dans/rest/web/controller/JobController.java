@@ -9,7 +9,6 @@ import com.spring.demo.dans.rest.web.utilities.Mapper;
 import com.spring.demo.dans.service.api.JobService;
 import java.util.List;
 import java.util.UUID;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +20,6 @@ import reactor.core.scheduler.Schedulers;
 /**
  * @author Rizky Perdana
  */
-@Slf4j
 @RestController
 @RequestMapping(ApiPath.JOB_ROUTE)
 public class JobController {

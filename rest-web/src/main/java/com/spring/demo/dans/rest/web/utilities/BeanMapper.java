@@ -1,6 +1,8 @@
 package com.spring.demo.dans.rest.web.utilities;
 
-import com.spring.demo.dans.entity.dto.Job;
+import com.spring.demo.dans.entity.dto.JobDto;
+import com.spring.demo.dans.entity.dto.param.AuthenticationParam;
+import com.spring.demo.dans.rest.web.request.AuthenticationRequest;
 import com.spring.demo.dans.rest.web.response.JobResponse;
 import org.mapstruct.Mapper;
 
@@ -10,5 +12,6 @@ import org.mapstruct.Mapper;
 @Mapper
 public interface BeanMapper {
 
-    JobResponse map(Job job);
+    JobResponse map(JobDto jobDto);
+    AuthenticationParam map(AuthenticationRequest request);
 }

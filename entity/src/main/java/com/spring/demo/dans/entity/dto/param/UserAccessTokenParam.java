@@ -1,15 +1,16 @@
-package com.spring.demo.dans.entity.dao;
+package com.spring.demo.dans.entity.dto.param;
 
-import com.spring.demo.dans.entity.dao.common.BaseEntity;
 import java.util.Date;
 import java.util.UUID;
+import lombok.Builder;
 import lombok.Data;
 
 /**
  * @author Rizky Perdana
  */
 @Data
-public class UserAccessToken extends BaseEntity {
+@Builder
+public class UserAccessTokenParam {
 
     private UUID userId;
     private String token;

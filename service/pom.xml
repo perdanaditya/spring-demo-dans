@@ -14,7 +14,7 @@
   <dependencies>
     <dependency>
       <groupId>com.spring.demo.dans</groupId>
-      <artifactId>entity</artifactId>
+      <artifactId>dao</artifactId>
     </dependency>
     <dependency>
       <groupId>com.spring.demo.dans</groupId>
@@ -24,5 +24,32 @@
       <groupId>org.asynchttpclient</groupId>
       <artifactId>async-http-client</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+    </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+              <version>${lombok.version}</version>
+            </path>
+            <path>
+              <groupId>org.mapstruct</groupId>
+              <artifactId>mapstruct-processor</artifactId>
+              <version>${org.mapstruct.version}</version>
+            </path>
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

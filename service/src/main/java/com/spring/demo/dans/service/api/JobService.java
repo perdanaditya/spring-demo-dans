@@ -1,6 +1,6 @@
 package com.spring.demo.dans.service.api;
 
-import com.spring.demo.dans.entity.dto.Job;
+import com.spring.demo.dans.entity.dto.JobDto;
 import java.util.UUID;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -10,6 +10,6 @@ import reactor.core.publisher.Mono;
  */
 public interface JobService {
 
-    Flux<Job> findAllJob();
-    Mono<Job> findJobById(UUID id);
+    Flux<JobDto> findAllJob();
+    Mono<JobDto> findJobById(UUID id);
 }

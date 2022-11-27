@@ -18,10 +18,11 @@
   <properties>
     <java.version>11</java.version>
     <retrofit.version>2.7.1</retrofit.version>
-    <spring.r2dbc.version>3.0.0</spring.r2dbc.version>
+    <spring.r2dbc.version>1.5.2</spring.r2dbc.version>
     <r2dbc.postgres.version>0.8.13.RELEASE</r2dbc.postgres.version>
     <async.http.client.version>2.12.2</async.http.client.version>
     <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
+    <jwt.version>0.9.1</jwt.version>
   </properties>
 
   <dependencyManagement>
@@ -47,6 +48,11 @@
         <version>${project.version}</version>
       </dependency>
       <dependency>
+        <groupId>com.spring.demo.dans</groupId>
+        <artifactId>dao</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
         <groupId>org.springframework.data</groupId>
         <artifactId>spring-data-r2dbc</artifactId>
         <version>${spring.r2dbc.version}</version>
@@ -57,20 +63,19 @@
         <version>${r2dbc.postgres.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.asynchttpclient</groupId>
-        <artifactId>async-http-client</artifactId>
-        <version>${async.http.client.version}</version>
-      </dependency>
-      <dependency>
         <groupId>org.mapstruct</groupId>
         <artifactId>mapstruct</artifactId>
         <version>${org.mapstruct.version}</version>
       </dependency>
       <dependency>
-        <groupId>javax.servlet</groupId>
-        <artifactId>javax.servlet-api</artifactId>
-        <version>3.0.1</version>
-        <scope>provided</scope>
+        <groupId>org.asynchttpclient</groupId>
+        <artifactId>async-http-client</artifactId>
+        <version>${async.http.client.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        <version>${jwt.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -100,6 +105,10 @@
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
   </dependencies>
 
   <build>
@@ -124,5 +133,6 @@
     <module>service</module>
     <module>libraries</module>
     <module>rest-web</module>
+    <module>dao</module>
   </modules>
 </project>

@@ -1,9 +1,0 @@
-com/spring/demo/dans/rest/web/configuration/CommonResponseHelper.class
-com/spring/demo/dans/rest/web/response/JobResponse.class
-com/spring/demo/dans/rest/web/utilities/BeanMapper.class
-com/spring/demo/dans/rest/web/response/BaseResponse$BaseResponseBuilder.class
-com/spring/demo/dans/rest/web/utilities/Mapper.class
-com/spring/demo/dans/rest/web/controller/JobController.class
-com/spring/demo/dans/rest/web/utilities/BeanMapperImpl.class
-com/spring/demo/dans/Main.class
-com/spring/demo/dans/rest/web/response/BaseResponse.class
