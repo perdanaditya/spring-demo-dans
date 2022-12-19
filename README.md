@@ -1,6 +1,6 @@
 # Spring Demo Apps
 
-repository ini dibuat sebagai tugas recruitment PT Dans Multi Pro.
+This repository is created for PT Dans Multi Pro technical test. For the stable version, please refer to `main` branch 
 
 ## What do you need (for initial installation)
 
